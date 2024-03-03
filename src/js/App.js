@@ -4,7 +4,9 @@ export default function App() {
     return (
       <>
         <h1>I am a react applciation</h1>
-        <button onClick={()=> console.log("clicked")}>Notify</button>
+        <button onClick={()=> {
+            electron.notificationApi.sendNotification("My custon notification")
+        }}>Notify</button>
       </>
     );
 }
